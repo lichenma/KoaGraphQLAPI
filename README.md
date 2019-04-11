@@ -1,8 +1,7 @@
-# TicTalk
+# KoaGraphQLAPI
 
-An expansion of the TicTacToe SpringBoot AngularJS Web Service created to help me learn about building
-Web Applications. I plan on integrating a chat room and websockets into this application and developing
-other neat features. 
+An API built with Koa created to help me learn about working with GraphQL. This project might also be 
+upgraded to include other features in the near future. 
 
 
 ## Getting Started
@@ -11,34 +10,34 @@ other neat features.
 
 Occasionally you may find my project hosted at 
 ```
- https://x-and-oh.herokuapp.com/
+ To Be Updated 
 ```
 
 <br>
 
 **Local Hosting:** 
 
-Otherwise Navigate to the `TicTacToe` folder, ensure gradle is installed and run the following: 
+Otherwise clone the repository and run the following: 
 ```
-gradle bootrun
+npm run start 
 ```
 
 ### Prerequisites
 
-Ideally the most recent java and gradle versions, I used the following when building and testing the webpage.
+Ideally use the same version of the dependencies in my `package.json` file. A short summary will be 
+provided below: 
 
 ```
-Gradle 5.2.1  Java version 1.8.0_192
+To be Updated
 ```
 
 ## Built With
 
-* [Spring](https://spring.io/) - Application Framework used
-* [Gradle](https://gradle.org/) - Dependency Management
-
+* [NodeJS](https://nodejs.org/en/) - Environment
+* [npm](https://www.npmjs.com/) - Package Manager
+* [koa](https://koajs.com/) - Framework 
+* [MongoDB](https://www.mongodb.com/) - Database 
 
 ## Acknowledgments
 
-* Vertabello Tutorial
-* W3schools Documentation
-* CodeBuddies
+* Strilliant Indrek
