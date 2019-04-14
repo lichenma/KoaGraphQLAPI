@@ -432,6 +432,16 @@ Notice the three properties inside the gadget query:
 Finally we export it: 
 
 
+```javascript 
+module.exports = new GraphQLSchema ({
+	query: RootQuery
+});
+```
+
+
+
+
+
 
 
 
