@@ -115,7 +115,21 @@ So, how does this work? what kind of transiler babel webpack magic do we need fo
 
 ### Tagged Template Literals 
 
-As it turns out the weird `styled.button`` `  
+As it turns out the weird `styled.button`` `  notation is actually part of JavaScript, the language. It
+is a new feature called **Tagged Template Literal** introduced in ES6. 
+
+
+Essentially it is just calling a function - `styled.button`` ` and `styled.button()` are almost the 
+same thing. The differences become visible as soon as you pass in arguments though. 
+
+Let's create a simple function to explore this: 
+
+```javascript 
+const logArgs = (...args) => console.log(...args) 
+```
+
+
+This is a pretty dumb 
 
 
 
