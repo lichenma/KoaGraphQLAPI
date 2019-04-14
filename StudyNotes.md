@@ -115,7 +115,7 @@ So, how does this work? what kind of transiler babel webpack magic do we need fo
 
 ### Tagged Template Literals 
 
-As it turns out the weird `styled.button\`\`` 
+As it turns out the weird `styled.button`` `  
 
 
 
