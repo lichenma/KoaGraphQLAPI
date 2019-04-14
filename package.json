@@ -1,0 +1,22 @@
+{
+  "name": "02-koagraphqlapi",
+  "version": "1.0.0",
+  "description": "An API built with Koa created to help me learn about working with GraphQL. This project might also be \r upgraded to include other features in the near future.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lichenma/KoaGraphQLAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lichenma/KoaGraphQLAPI/issues"
+  },
+  "homepage": "https://github.com/lichenma/KoaGraphQLAPI#readme",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
