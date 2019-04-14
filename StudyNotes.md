@@ -92,6 +92,16 @@ this is in case this concept is unfamiliar
 ## Styled Components 
 
 
+If you have never seen `styled-components` before, this is what a styled React component looks like: 
+
+```javascript 
+const Button = styled.button`
+	background-color: papayawhip;
+	border-radius: 3px; 
+	color: palevioletred; 
+`
+```
+
 
 
 
