@@ -89,6 +89,13 @@ this is in case this concept is unfamiliar
 
 
 
+
+
+
+<!---  ==================== information about React Styled Components ============== -->
+
+
+
 ## Styled Components 
 
 
@@ -129,7 +136,25 @@ const logArgs = (...args) => console.log(...args)
 ```
 
 
-This is a pretty dumb 
+This is a pretty dumb
+
+
+
+
+<!---  ==================== information about React Styled Components ============== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
