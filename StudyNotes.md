@@ -145,7 +145,16 @@ This is a pretty dumb
 
 
 
+## GraphQL 
 
+Now we can pass the initial schema to our graphql server. 
+
+```javascript 
+app.use(mount('/graphql', graphqlHTTP ({ 
+	schema: schema, 
+	graphiql: true
+})))
+```
 
 
 
