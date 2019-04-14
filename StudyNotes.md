@@ -102,8 +102,20 @@ const Button = styled.button`
 `
 ```
 
+This `Button` variable is now a React component you can render just like any other React component
+
+```
+<Button>Hello World</Button> 
+```
+
+So, how does this work? what kind of transiler babel webpack magic do we need for this to work? 
 
 
+<br><br> 
+
+### Tagged Template Literals 
+
+As it turns out the weird `styled.button\`\`` 
 
 
 
