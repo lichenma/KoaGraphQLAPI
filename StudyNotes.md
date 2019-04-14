@@ -197,8 +197,78 @@ npm install mongoose
 ```
 
 
-## Creating a database.js File 
+## Creating a database.js File
 
+We create a dedicated file for database connection: 
+
+```javascript 
+const mongoose = require('mongoose'); 
+
+const initDB = () => { 
+	
+	mongoose.connect(
+		'mongodb://',
+		{ useNewUrlParser: true } 
+	);
+
+	mongoose.connection.once('open', () => {
+		console.log('connected to database'); 
+	}); 
+
+}
+
+module.exports = intiDB; 
+```
+
+
+This block of code will try to connect to the remote mongodb. We need to call it somewhere now. Open 
+`server.js` and `require` and call the method: 
+
+
+
+```javascript 
+const initDB = require('./database'); 
+
+initDB(); 
+```
+
+If we did everything correctly, our console should tell us that we connect successfully. 
+
+
+
+
+## Dependency - pm2 
+
+
+Notice how annoying it is to constantly refresh the server. Let's solve this with a package called 
+`pm2` 
+
+
+PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows 
+users to keep applications alive forever, to reload them without downtime and to facilitate common 
+admin tasks 
+
+```
+npm install pm2 -g 
+```
+
+Add a script called start to our `package.json` 
+
+```
+"scripts": { 
+	"start": "pm2 start server.js"
+},
+```
+
+Now pm2 runs in the background which frees up our terminal. If you ever want to stop the process, just
+run `pm2 kill`. Now we don't have to restart the server all the time, `pm2` does that automatically. 
+
+
+> `pm2 logs` returns the console log statements to the terminal 
+
+
+
+## MongoDB models 
 
 
 
