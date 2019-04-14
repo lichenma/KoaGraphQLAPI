@@ -166,7 +166,38 @@ const graphqlHTTP = require('koa-graphql');
 const schema = require('./graphql/schema'); 
 ```
 
-Now if we head over to `localhost:9000/graphql`; 
+Add in the `graphql` dependency and start node: 
+
+``` 
+npm install graphql
+node server.js 
+```
+
+
+Now if we head over to `localhost:9000/graphql` we can see the graphiql page and voila, the initial 
+setup is done. It is not useful yet as we would like to query GraphQL to save data to our mongoDB 
+and read data from there. 
+
+
+
+## Setting up MongoDB 
+
+In order to read and write with GraphQL, we need a place to read from. This is where Mongo will come in
+handy. We will save and read our data from there. 
+
+To make things simpler, we are going to use a cloud instance for Mongo. We will be using mlab for this 
+project and as usual we need to create a user and a mongo database. 
+
+
+
+We will pair the mongoDB with Mongoose so we need to install the dependency: 
+
+```
+npm install mongoose
+```
+
+
+## Creating a database.js File 
 
 
 
