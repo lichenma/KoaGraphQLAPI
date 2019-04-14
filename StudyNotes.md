@@ -268,10 +268,78 @@ run `pm2 kill`. Now we don't have to restart the server all the time, `pm2` does
 
 
 
+
 ## MongoDB models 
 
+When we work with Mongo, mongoDB let's us create Models for our data. This is a neat way for us to 
+structure how our data will look like. 
 
 
+Create a folder models and a file `gadgets.js` inside it: 
+
+```javascript 
+const mongoose = require('mongoose'); 
+const Schema = mongoose.Schema; 
+
+
+/* 
+	Notice that there is no ID - this is because Mongoose will assign an ID by default to all 
+	Schemas 
+*/ 
+
+const GadgetSchema = new Schema({ 
+	name: String, 
+	release_date: Date, 
+	by_company: String, 
+	price: Number, 
+});
+
+
+module.exports = mongoose.model('Gadget', GadgetSchema); 
+```
+
+
+Let's add a collection and some dummy data. The collection name has to map our gadget name in plural - 
+`gadgets` in this case. 
+
+
+After creating the collection, insert the document in JSON format: 
+
+```
+{ 
+	"name": "iPhone XS", 
+	"release_date": "21 September, 2018",
+	"by_company": "Apple",
+	"price": 999
+}
+```
+
+This is all for Mongo, now lets fetch the data with GraphQL. 
+
+
+
+
+## GraphQL Queries 
+
+GraphQL requires us to create types as well. Think of it like instructions for computers. 
+
+`graphql/gadgetType.js`
+
+
+```javascript
+const graphql = require('graphql');
+
+const { GraphQLObjectType, GraphQLString } = graphql; 
+
+const GadgetType = new GraphQLObjectType ({
+	name: 'Gadget', 
+	fields: () => ({
+	
+	})
+});
+
+module.exports = GadgetType; 
+```
 
 
 
