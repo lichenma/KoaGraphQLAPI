@@ -342,6 +342,83 @@ module.exports = GadgetType;
 ```
 
 
+Notice we created a graphql type. Inside the fields we can specify the properties of the given type: 
+
+```javascript
+const graphql = require('graphql');
+
+const { GraphQLObjectType, GraphQLObjectType } = graphql; 
+
+const GadgetType = new GraphQLObjectType({
+	name: 'Gadget',
+	fields: () => ({
+		id: { type: GraphQLString }, 
+		name: { type: GraphQLString },
+		release_date: { type: GraphQLString }, 
+		by_company: { type: GraphQLString },
+		price: { type: GraphQLString }
+	})
+});
+
+module.exports = GadgetType; 
+```
+
+Notice the `GraphQLObjectType` and `GraphQLObjectType` types we deconstruct from graphQL. These are the
+primitive types for graphQL. 
+
+
+Creating the graphQL types also grants type-hinting which we will use when creating our queries. 
+
+
+The last thing we need to do is refactor our `schema.js`. We want to query a gadget by `id`. 
+
+
+<br><br> 
+
+
+Import the `Gadget` model, `gadgetGraphQLType` graphql type and `GraphQLSchema`, `GraphQLObjectType`,
+`GraphQLString` from graphQL to `schema.js`
+
+```javscript 
+const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql'); 
+const gadgetGraphQLType = require('./gadgetType'); 
+const Gadget = require('../models/gadget');
+```
+
+
+
+
+
+## Root Query 
+
+
+Next we need a root query. Every graphql query starts with curly brackets `{}` - this is the root query
+
+
+```javascript 
+const RootQuery = new GraphQLObjectType({
+	name: 'RootQueryType',
+	field: {
+	}
+})
+```
+
+Great, now inside the fields we can specify the `gadget` query: 
+
+```javascript 
+const RootQuery = new GraphQLObjectType({
+	name: 'RootQueryType', 
+	fields: {
+		gadget: {
+			type: gadgetGraphQLType, 
+			args: { id: { type: GraphQLString }}, 
+			resolve(parent, args) {
+				return Gadget.findById(<a href="http://args.id" class="link link-url" target="_blank" rel="external nofollow noopener noreferrer">args.id</a>)
+			}
+		}
+	}
+})
+```
 
 
 
