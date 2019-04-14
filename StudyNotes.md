@@ -420,7 +420,16 @@ const RootQuery = new GraphQLObjectType({
 })
 ```
 
+Notice the three properties inside the gadget query: 
 
+* type 	  : this is the type of the query - `gadgetGraphQLType` in this case 
+* args	  : we can provide arguments to graphql queries like - `gadgets(id: "1")`
+* resolve : how do we want to resolve the query? What should happen once the query is being made? Here
+            we return the Gadget **model** by id
+
+
+
+Finally we export it: 
 
 
 
