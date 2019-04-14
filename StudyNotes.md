@@ -156,6 +156,18 @@ app.use(mount('/graphql', graphqlHTTP ({
 })))
 ```
 
+Do not forget to import `koa-mount`, `koa-graphql`, and finally the `schema.js` 
+
+
+
+```javascript 
+const mount = require('koa-mount'); 
+const graphqlHTTP = require('koa-graphql'); 
+const schema = require('./graphql/schema'); 
+```
+
+Now if we head over to `localhost:9000/graphql`; 
+
 
 
 
