@@ -445,6 +445,7 @@ const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql');
 const gadgetGraphQLType = require('./gadgetType);
 const Gadget = require('../models/gadget');
 
+
 const RootQuery = new GraphQLObjectType({
 	name: 'RootQueryType', 
 	fields: {
