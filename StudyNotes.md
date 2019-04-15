@@ -494,6 +494,20 @@ We should receive an output that looks like this:
 }
 ```
 
+<br><br>
+## End of Part 1
+
+This concludes the first part of the tutorial in the next section we will cover mutations, and how 
+we can create, delete, and read records from our MongoDB with GraphQL
+
+
+---
+
+<br><br><br><br> 
+
+
+
+## 
 
 
 
