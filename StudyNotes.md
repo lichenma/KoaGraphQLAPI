@@ -170,9 +170,14 @@ an array then?
 
 ## Interpolations 
 
-Template literals can have *interpolations*, which look something like this 
-`\`I like ${favoriteFood}\``. Let's call `logArgs` with parenthesis and a template literal as the first
-argument: 
+Template literals can have *interpolations*, which look something like this:
+
+```
+`I like ${favoriteFood}`
+```
+
+
+Let's call `logArgs` with parenthesis and a template literal as the first argument: 
 
 
 
