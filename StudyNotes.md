@@ -156,7 +156,23 @@ logArgs``
 // -> [""]
 ```
 
-This logs an array
+This logs an array with an empty string as the first and only element. Interesting! What would happen
+if we pass a simple string in? 
+
+```
+logArgs`I like pizza`
+// -> ["I like pizza"]
+```
+
+Okay, so the first element of the array is actually just whatever is passed into the string. Why is it
+an array then? 
+
+
+## Interpolations 
+
+Template literals can have *interpolations*, which look something like this 
+`\`I like ${favoriteFood}\``. Let's call `logArgs` with parenthesis and a template literal as the first
+argument: 
 
 
 
