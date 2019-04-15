@@ -452,7 +452,7 @@ const RootQuery = new GraphQLObjectType({
 			type: gadgetGraphQLType, 
 			args: { id: { type: GraphQLString }},
 			resolve(parent, args) {
-				return Gadget.findById(<a href="http://args.id" class="link link-url" target="_blank" rel="external nofollow noopener noreferrer">args.id</a>)
+				return Gadget.findById(args.id)
 			}
 		}
 	}
@@ -464,6 +464,35 @@ module.exports = new GraphQLSchema({
 ```
 
 Now we can head over to `http://localhost:9000/graphql` and make the query: 
+
+```
+{ 
+	gadget(id: "5cb3a617e7179a5701577763") {
+		name
+		price
+		by_company
+		release_date
+		id
+	}
+}
+```
+
+
+We should receive an output that looks like this: 
+
+```
+{
+  "data": {
+    "gadget": {
+      "name": "iPhone XS",
+      "price": "999",
+      "by_company": "Apple",
+      "release_date": "1537502400000",
+      "id": "5cb3a617e7179a5701577763"
+    }
+  }
+}
+```
 
 
 

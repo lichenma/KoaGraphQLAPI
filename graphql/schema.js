@@ -9,11 +9,13 @@ const RootQuery = new GraphQLObjectType({
             type: gadgetGraphQLType, 
             args: { id: { type: GraphQLString }},
             resolve(parent, args) {
-                return Gadget.findById(<a href="http://args.id" class="link link-url" target="_blank" rel="external nofollow noopener noreferrer">args.id</a>)
+                return Gadget.findById(args.id)
             }
         }
     }
 })
 
 
-module.exports = new schema; 
+module.exports = new GraphQLSchema({
+    query: RootQuery
+}); 
