@@ -89,8 +89,8 @@ this is in case this concept is unfamiliar
 
 
 
-
-
+<br><br>
+---
 
 <!---  ==================== information about React Styled Components ============== -->
 
@@ -136,14 +136,33 @@ const logArgs = (...args) => console.log(...args)
 ```
 
 
-This is a pretty dumb
+This is a pretty dumb function that does nothing except log all arguments passed into the function 
+call. A simple example of usage: 
 
+
+```
+logArgs('a', 'b')
+// -> a b 
+```
+
+
+> we denote `->` as a log in the console output for this document
+
+
+Now if we try calling it as a tagged template literal: 
+
+```
+logArgs``
+// -> [""]
+```
+
+This logs an array
 
 
 
 <!---  ==================== information about React Styled Components ============== -->
-
-
+<br><br>
+---
 
 ## GraphQL 
 
