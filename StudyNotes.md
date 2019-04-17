@@ -177,7 +177,17 @@ Template literals can have *interpolations*, which look something like this:
 ```
 
 
-Let's call `logArgs` with parenthesis and a template literal as the first argument: 
+Let's call `logArgs` with parenthesis and a template literal as the first argument:
+
+```javascript 
+const favoriteFood = 'pizza' 
+
+logArgs(`I like ${favoriteFood}.`)
+// -> I like pizza. 
+```
+
+As you can see, JavaScript goes ahead and puts the interpolations value into the string it passes to
+the function. What happens when we do the same thing, but call `logArgs` as a tagged template literal?
 
 
 
